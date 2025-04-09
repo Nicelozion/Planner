@@ -7,15 +7,18 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "types": "tsc --noEmit --project ./tsconfig.json && tsc --noEmit --project ./tsconfig.node.json"
   },
   "dependencies": {
     "@planer/backend": "workspace:*",
     "@tanstack/react-query": "^5.72.0",
-    "@trpc/client": "^11.0.2",
-    "@trpc/react-query": "^11.0.2",
+    "@trpc/client": "^11.0.3",
+    "@trpc/react-query": "^11.0.3",
+    "@trpc/server": "11.0.3",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.1.0",
+    "react-router-dom": "^7.5.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.21.0",
