@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import { ViewIdeaRouteParams } from "../../lib/routes";
 import { trpc } from "../../lib/trpc.tsx";
 import css from "./index.module.scss";
+import { Segment } from "../../components/Segment/index.tsx";
 
 export const ViewIdeaPage = () => {
   const { ideaNick } = useParams() as ViewIdeaRouteParams;
@@ -23,14 +24,12 @@ export const ViewIdeaPage = () => {
   }
 
   return (
-    <div>
-      <h1 className={css.title}>{data.idea.name}</h1>
-      <p className={css.description}>{data.idea.description}</p>
+    <Segment title={data.idea.name} size={1} description={data.idea.description}>
       <div className={css.text}>
         {data.idea.text.split("\n").map((paragraph, index) => (
           <p key={index} dangerouslySetInnerHTML={{ __html: paragraph }} />
         ))}
       </div>
-    </div>
+    </Segment>
   );
 };
