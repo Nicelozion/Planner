@@ -1,11 +1,12 @@
 @import "../../styles/vars.scss";
 @import "../../styles/mixins.scss";
 
-.ideas {
+.ideas {    
   .idea {
     padding: 20px;
     border: 1px solid $black;
     border-radius: 10px;
+    box-shadow:0px 0px 15px #9050eb;
     & + .idea {
       margin-top: 20px;
     }

@@ -1,13 +1,14 @@
 @import './vars.scss';
 @import '../../node_modules/include-media/dist/_include-media.scss';
 
-@mixin link($color: $blue, $hoverColor: $red) {
+@mixin link($color: #4286fa, $hoverColor: rgb(213, 213, 40)) {
   color: $color;
-  transition: color 200ms ease;
+  transition: 0.3s;
   &:hover,
   &:active {
     color: $hoverColor;
-    transition: none;
+    transition: 0.3s;
+    text-shadow: 0 0 20px yellow;
   }
 }
 
